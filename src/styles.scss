@@ -1,1 +1,62 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: "FiraCode";
+}
+
+body {
+  background: #1c1c1c;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+@font-face {
+  font-family: "FiraCode";
+  font-style: normal;
+  font-weight: 300;
+  src: url("./assets/font/FiraCode-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "FiraCode";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/font/FiraCode-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "FiraCode";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./assets/font/FiraCode-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "FiraCode";
+  font-style: normal;
+  font-weight: 600;
+  src: url("./assets/font/FiraCode-SemiBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "FiraCode";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./assets/font/FiraCode-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Karla-Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./assets/font/Karla-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Karla-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/font/Karla-Regular.woff2") format("woff2");
+}

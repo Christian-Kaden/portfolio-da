@@ -1,0 +1,72 @@
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #d9d9d9;
+  gap: 12px;
+  > span {
+    font-size: 40px;
+    font-weight: 400;
+  }
+  > div {
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    > h1 {
+      font-family: "Karla-Bold";
+      font-size: 128px;
+      line-height: 128px;
+      letter-spacing: -0.02em;
+    }
+    > div {
+      display: flex;
+      gap: 48px;
+      > button {
+        padding: 13px 24px;
+        border-radius: 100px;
+        border: 1px solid #ffffff;
+        background-color: transparent;
+        cursor: pointer;
+        font-family: "Karla-Regular";
+        color: #ffffff;
+        font-size: 18px;
+        line-height: 21.6px;
+        position: relative;
+        overflow: hidden;
+        > span {
+          transition: transform 0.5s ease; /* Initialer Zustand ohne Transformation */
+        }
+        &:hover {
+          border: 1px solid #3dcfb6;
+        }
+        &:hover > span {
+          color: #3dcfb6;
+          display: inline-block;
+          white-space: nowrap;
+          animation: slideText 2.4s ease-in-out infinite;
+        }
+      }
+    }
+  }
+}
+
+@keyframes slideText {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    opacity: 1;
+  }
+  49% {
+    transform: translateX(-120%);
+  }
+  51% {
+    opacity: 0;
+    transform: translateX(120%);
+  }
+  75% {
+    opacity: 1;
+  }
+}
