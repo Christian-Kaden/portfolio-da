@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { LandingPageComponent } from './landing-page/landing-page.component';
-import { AboutMeComponent } from './about-me/about-me.component';
-import { SkillsComponent } from './skills/skills.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
-import { ReferencesComponent } from './references/references.component';
-import { ContactMeComponent } from './contact-me/contact-me.component';
+import { LandingPageComponent } from './main-content/landing-page/landing-page.component';
+import { AboutMeComponent } from './main-content/about-me/about-me.component';
+import { SkillsComponent } from './main-content/skills/skills.component';
+import { PortfolioComponent } from './main-content/portfolio/portfolio.component';
+import { ReferencesComponent } from './main-content/references/references.component';
+import { ContactMeComponent } from './main-content/contact-me/contact-me.component';
 import { FooterComponent } from './shared/footer/footer.component';
 
 @Component({
