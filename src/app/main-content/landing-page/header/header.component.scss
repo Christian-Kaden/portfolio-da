@@ -74,3 +74,26 @@ a:hover .radio-button {
 a:hover {
   cursor: pointer;
 }
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-logo h1 {
+  font-family: "Montserrat-Black";
+  color: #3dcfb6;
+  font-size: 50px;
+}
+
+.header-logo-text {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+
+.header-logo-text span {
+  font-family: "Montserrat-SemiBold";
+  font-size: 18px;
+}

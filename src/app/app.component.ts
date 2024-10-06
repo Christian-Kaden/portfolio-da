@@ -8,6 +8,7 @@ import { PortfolioComponent } from './main-content/portfolio/portfolio.component
 import { ReferencesComponent } from './main-content/references/references.component';
 import { ContactMeComponent } from './main-content/contact-me/contact-me.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { MainContentComponent } from './main-content/main-content.component';
 
 @Component({
   selector: 'app-root',
@@ -22,6 +23,7 @@ import { FooterComponent } from './shared/footer/footer.component';
     ReferencesComponent,
     ContactMeComponent,
     FooterComponent,
+    MainContentComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

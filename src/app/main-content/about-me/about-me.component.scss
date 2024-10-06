@@ -1,0 +1,86 @@
+section {
+  display: flex;
+  justify-content: space-between;
+  width: 1240px;
+  height: 708px;
+  margin-top: 144px;
+  > div {
+    > img {
+      width: 568px;
+      height: 568px;
+      border-radius: 30px;
+      object-fit: cover;
+      transform: scaleX(-1);
+      align-self: flex-start;
+    }
+  }
+}
+
+.about-me-box {
+  display: flex;
+  flex-direction: column;
+  width: 568px;
+  gap: 20px;
+  align-self: flex-end;
+  > h2 {
+    font-family: "Karla-Medium";
+    font-size: 24px;
+    line-height: 28.06px;
+    color: #3dcfb6;
+    font-weight: 500;
+  }
+  > div {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #3dcfb6;
+    border-radius: 30px;
+    padding: 32px;
+    gap: 40px;
+    background-color: #3dcfb61a;
+    > h1 {
+      font-size: 64px;
+      line-height: 64px;
+      letter-spacing: -0.03em;
+      color: #3dcfb6;
+    }
+  }
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  > p {
+    text-align: justify;
+    color: #ffffff;
+  }
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    > div {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      &:hover p {
+        color: #ffffff;
+        transition: 100ms ease-in;
+      }
+      > img {
+        width: 32px;
+        height: 32px;
+      }
+      > p {
+        text-align: left;
+        color: #ffffffcc;
+      }
+    }
+  }
+}
+
+p {
+  font-family: "Karla-Regular";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+}
