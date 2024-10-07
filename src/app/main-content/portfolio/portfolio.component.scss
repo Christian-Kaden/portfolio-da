@@ -1,0 +1,161 @@
+section {
+  width: 1240px;
+  margin-top: 144px;
+  display: flex;
+  justify-content: space-between;
+}
+
+aside {
+  width: 880px;
+  display: flex;
+  flex-direction: column;
+  gap: 41px;
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #3dcfb6;
+    > h2 {
+      font-family: "Karla-Bold";
+      font-size: 24px;
+      line-height: 28.06px;
+    }
+    > h1 {
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 64px;
+      letter-spacing: -0.03em;
+    }
+  }
+}
+
+p {
+  font-family: "Karla-Regular";
+  font-size: 18px;
+  line-height: 21.6px;
+  text-align: justify;
+  color: #ffffff;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 32px 40px 32px;
+  gap: 0px;
+  border: 0px 0px 1px 0px;
+  border-top: 1px solid #3dcfb6;
+  color: #ffffff;
+  position: relative;
+  &:last-child {
+    border-bottom: 1px solid #3dcfb6;
+  }
+  &:hover {
+    background-color: #3dcfb64d;
+    cursor: pointer;
+    transition: background-color 150ms ease-in;
+  }
+  &:hover img {
+    display: inline-block;
+  }
+}
+
+.project-name {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  > h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.8px;
+  }
+  > img {
+    display: none;
+    width: 23px;
+    height: 23px;
+  }
+}
+
+.project-tec {
+  display: flex;
+  gap: 4px;
+  font-family: "Karla-Regular";
+  font-size: 18px;
+  line-height: 21.6px;
+  > div {
+    font-size: 14px;
+    color: #3dcfb6;
+    font-weight: 500;
+  }
+}
+
+.project-picture {
+  position: relative;
+  display: inline-block;
+  > img {
+    width: 295px;
+    height: 192px;
+    border-radius: 16px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.project-picture::before {
+  content: "";
+  position: absolute;
+  border-radius: 16px;
+  top: 16px;
+  left: 16px;
+  width: 295px;
+  height: 192px;
+  background: repeating-linear-gradient(
+    135deg,
+    transparent,
+    transparent 10px,
+    #3dcfb6 10px,
+    #3dcfb6 11px
+  );
+  z-index: -1;
+  pointer-events: none;
+}
+
+ul li:nth-child(1):hover .join {
+  opacity: 1;
+  transition: opacity 150ms ease-in;
+}
+
+ul li:nth-child(2):hover .el-pollo-loco {
+  opacity: 1;
+  transition: opacity 150ms ease-in;
+}
+
+ul li:nth-child(3):hover .dabubble {
+  opacity: 1;
+  transition: opacity 150ms ease-in;
+}
+
+.join {
+  position: absolute;
+  left: 945px;
+  top: -20px;
+  opacity: 0;
+}
+
+.el-pollo-loco {
+  position: absolute;
+  left: 945px;
+  top: -45px;
+  opacity: 0;
+}
+
+.dabubble {
+  position: absolute;
+  left: 945px;
+  top: -70px;
+  opacity: 0;
+}
