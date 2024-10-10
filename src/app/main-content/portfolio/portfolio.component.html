@@ -9,7 +9,7 @@
       projects to see my skills in action.
     </p>
     <ul>
-      <li>
+      <li (click)="openDialog(0)">
         <div class="project-name">
           <h3>Join</h3>
           <img src="./../../../assets/img/portfolio-arrow.svg" alt="" />
@@ -31,7 +31,7 @@
           </div>
         </div>
       </li>
-      <li>
+      <li (click)="openDialog(1)">
         <div class="project-name">
           <h3>El Pollo Loco</h3>
           <img src="./../../../assets/img/portfolio-arrow.svg" alt="" />
@@ -52,7 +52,7 @@
           </div>
         </div>
       </li>
-      <li>
+      <li (click)="openDialog(2)">
         <div class="project-name">
           <h3>DA Bubble</h3>
           <img src="./../../../assets/img/portfolio-arrow.svg" alt="" />
@@ -75,4 +75,10 @@
       </li>
     </ul>
   </aside>
+  <app-dialog
+    *ngIf="isDialogOpen"
+    [currentProject]="currentProject"
+    (closeDialogEvent)="closeDialog()"
+  >
+  </app-dialog>
 </section>

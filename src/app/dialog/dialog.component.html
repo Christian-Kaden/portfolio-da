@@ -1,0 +1,76 @@
+<div class="overlay" (click)="closeDialog()"></div>
+<div class="dialog">
+  <article>
+    <div class="title">
+      <h1>{{ projects[currentProject].number }}</h1>
+      <h2>{{ projects[currentProject].title }}</h2>
+    </div>
+    <div class="content">
+      <div class="description">
+        <h3>What is this project about?</h3>
+        <p>
+          {{ projects[currentProject].description }}
+        </p>
+      </div>
+      <div class="skills">
+        <div *ngFor="let skillIndex of projects[currentProject].skills">
+          <div class="skill" *ngIf="skills[skillIndex]">
+            <img
+              [src]="skills[skillIndex].skillImageUrl"
+              alt="{{ skills[skillIndex].skillTitle }}"
+            />
+            <span>{{ skills[skillIndex].skillTitle }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="links">
+      <a [href]="projects[currentProject].linkGitHub" target="_blank">
+        <span>GitHub</span>
+        <img
+          class="btn-arrow"
+          src="assets/img/button-arrow-outward.svg"
+          alt=""
+        />
+        <img
+          class="btn-arrow-hover"
+          src="assets/img/button-arrow-outward-hover.svg"
+          alt=""
+        />
+      </a>
+      <a [href]="projects[currentProject].linkLiveTest" target="_blank">
+        <span>Live Test</span>
+        <img
+          class="btn-arrow"
+          src="assets/img/button-arrow-outward.svg"
+          alt=""
+        />
+        <img
+          class="btn-arrow-hover"
+          src="assets/img/button-arrow-outward-hover.svg"
+          alt=""
+        />
+      </a>
+    </div>
+  </article>
+  <aside>
+    <button class="close" (click)="closeDialog()">
+      <img class="btn-close" src="assets/img/dialog-close.svg" alt="" />
+      <img
+        class="btn-close-hover"
+        src="assets/img/dialog-close-hover.svg"
+        alt=""
+      />
+    </button>
+    <img [src]="projects[currentProject].imageUrl" alt="Project Image" />
+    <button class="next" (click)="nextProject()">
+      <span>Next project</span>
+      <img class="btn-next" src="assets/img/dialog-arrow-next.svg" alt="" />
+      <img
+        class="btn-next-hover"
+        src="assets/img/dialog-arrow-next-hover.svg"
+        alt=""
+      />
+    </button>
+  </aside>
+</div>

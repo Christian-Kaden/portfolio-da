@@ -9,6 +9,7 @@ import { ReferencesComponent } from './main-content/references/references.compon
 import { ContactMeComponent } from './main-content/contact-me/contact-me.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { MainContentComponent } from './main-content/main-content.component';
+import { DialogComponent } from './dialog/dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -24,6 +25,7 @@ import { MainContentComponent } from './main-content/main-content.component';
     ContactMeComponent,
     FooterComponent,
     MainContentComponent,
+    DialogComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
