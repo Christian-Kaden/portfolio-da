@@ -8,8 +8,9 @@
       <h2>Got a problem to solve?</h2>
       <p>
         Contact me through this form, I am interested in hearing from you,
-        knowing your ideas and contributing to your projects with my work. Need
-        a Frontend developer?<button>Let's talk!</button>
+        knowing your ideas and contributing to your projects with my work.
+        <br /><br />
+        Need a Frontend developer?<button>Let's talk!</button>
       </p>
     </div>
   </article>
@@ -35,16 +36,39 @@
     <div class="privacy-policy">
       <div>
         <div>
-          <img src="" alt="" />
+          <img
+            [ngClass]="{ 'check-mark-unchecked': !aggrement, 'check-mark-checked': aggrement,   }"
+            (click)="acceptPrivacyPolicy()"
+            src="assets/img/contact-check-mark-unchecked.svg"
+            alt=""
+          />
+          <img
+            [ngClass]="{ 'check-mark-unchecked': aggrement, 'check-mark-checked': !aggrement,   }"
+            (click)="acceptPrivacyPolicy()"
+            src="assets/img/contact-check-mark-checked.svg"
+            alt=""
+          />
           <span
             >I've read the <a href="">privacy policy</a> and agree to the
             processing of my data as outlined.</span
           >
         </div>
-        <span>Please accept the privacy policy.</span>
+        <span
+          [ngClass]="{
+            'error-message-hidden': !errorMessage,
+            'error-message-shown': errorMessage
+          }"
+          >Please accept the privacy policy.</span
+        >
       </div>
       <div>
-        <button class="btn-hello"><span>Say Hello ;)</span></button>
+        <button
+          [ngClass]="{ 'btn-hello-disabled': !aggrement, 'btn-hello': aggrement,   }"
+          class="btn"
+          (click)="checkAggrement()"
+        >
+          <span>Say Hello ;)</span>
+        </button>
       </div>
     </div>
   </form>

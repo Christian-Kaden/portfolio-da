@@ -1,10 +1,7 @@
 section {
   position: relative;
-}
-.quotes {
-  position: absolute;
-  top: 80px;
-  left: -45px;
+  margin-top: 144px;
+  width: 1240px;
 }
 
 main {
@@ -12,6 +9,9 @@ main {
   flex-direction: column;
   gap: 48px;
   align-items: center;
+  position: relative;
+  width: 100%;
+  height: 460px;
   > h1 {
     font-size: 32px;
     font-weight: 700;
@@ -20,16 +20,28 @@ main {
   }
 }
 
-.container {
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.card {
+  position: absolute;
   display: flex;
   flex-direction: column;
-  height: 274px;
-  width: 632px;
+  height: 178px;
+  width: 552px;
   border-radius: 32px;
   padding: 48px 40px;
-  gap: 44px;
   border: 1px solid #3dcfb6;
   background: #3dcfb64d;
+  transition: all 0.5s ease;
+  transform: scale(0.7);
   > p {
     font-family: "Karla-Regular";
     font-size: 20px;
@@ -56,4 +68,98 @@ main {
       white-space: nowrap;
     }
   }
+}
+
+.card.active {
+  opacity: 1;
+  transform: scale(1) translateX(0);
+  z-index: 2;
+}
+
+.card.left {
+  transform: scale(0.7) translateX(-130%);
+  opacity: 0.5;
+  z-index: 1;
+  background: #3dcfb61a;
+}
+
+.card.right {
+  transform: scale(0.7) translateX(130%);
+  opacity: 0.5;
+  z-index: 1;
+  background: #3dcfb61a;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.right {
+  transform: scaleX(-1);
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  > img {
+    width: 40px;
+    height: 40px;
+  }
+  > .btn-arrow-hover {
+    display: none;
+  }
+  &:hover .btn-arrow {
+    display: none;
+  }
+  &:hover .btn-arrow-hover {
+    display: inline-block;
+    cursor: pointer;
+  }
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.dots span {
+  height: 8px;
+  width: 8px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dots span.active {
+  background-color: #3dcfb6;
+}
+
+.quotes {
+  position: absolute;
+  top: 80px;
+  left: 265px;
+  z-index: 3;
+}
+
+.shadow-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(28, 28, 28, 1) 0%,
+    rgba(28, 28, 28, 0) 15%,
+    rgba(28, 28, 28, 0) 85%,
+    rgba(28, 28, 28, 1) 100%
+  );
 }

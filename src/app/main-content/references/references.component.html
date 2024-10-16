@@ -1,22 +1,55 @@
 <section>
-  <div class="quotes">
-    <img src="./../../../assets/img/references-quotes.svg" alt="" />
-  </div>
   <main>
     <h1>What my colleagues say about me</h1>
-    <div class="container-section">
-      <div class="container">
-        <p>
-          Christian has proven to be a reliable group partner. His technical
-          skills and proactive approach were crucial to the success of our
-          project.
-        </p>
+    <div class="cards-container">
+      <div
+        *ngFor="let card of cards; let i = index"
+        class="card"
+        [class.active]="i === currentCardIndex"
+        [class.left]="
+          i === (currentCardIndex - 1 + cards.length) % cards.length
+        "
+        [class.right]="i === (currentCardIndex + 1) % cards.length"
+      >
+        <p>{{ card.text }}</p>
         <div class="source">
           <div></div>
-          <span>H.Janisch - Team Partner</span>
+          <span>{{ card.author }}</span>
         </div>
       </div>
     </div>
-    <nav></nav>
+    <div class="shadow-wrapper"></div>
+    <nav>
+      <button (click)="prevCard()" class="arrow">
+        <img class="btn-arrow" src="assets/img/references-arrow.svg" alt="" />
+        <img
+          class="btn-arrow-hover"
+          src="assets/img/references-arrow-hover.svg"
+          alt=""
+        />
+      </button>
+      <div class="dots">
+        <span
+          *ngFor="let card of cards; let i = index"
+          [class.active]="i === currentCardIndex"
+          (click)="goToCard(i)"
+        ></span>
+      </div>
+      <button (click)="nextCard()" class="arrow">
+        <img
+          class="btn-arrow right"
+          src="assets/img/references-arrow.svg"
+          alt=""
+        />
+        <img
+          class="btn-arrow-hover right"
+          src="assets/img/references-arrow-hover.svg"
+          alt=""
+        />
+      </button>
+    </nav>
   </main>
+  <div class="quotes">
+    <img src="assets/img/references-quotes.svg" alt="" />
+  </div>
 </section>
