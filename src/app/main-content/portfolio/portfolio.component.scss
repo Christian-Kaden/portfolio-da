@@ -1,12 +1,21 @@
-section {
-  width: 1240px;
-  margin-top: 144px;
+.wrapper {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  max-width: 1440px;
+  width: 100%;
+  margin: 144px 72px 0 72px;
+}
+
+section {
+  display: flex;
+  // justify-content: space-between;
+  flex-grow: 1;
 }
 
 aside {
-  width: 880px;
+  // width: 880px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 41px;
@@ -43,6 +52,7 @@ ul {
 
 li {
   display: flex;
+  flex-grow: 1;
   align-items: center;
   justify-content: space-between;
   padding: 40px 32px 40px 32px;
@@ -59,7 +69,7 @@ li {
     cursor: pointer;
     transition: background-color 150ms ease-in;
   }
-  &:hover img {
+  &:hover .project-picture {
     display: inline-block;
   }
 }
@@ -95,7 +105,7 @@ li {
 
 .project-picture {
   position: relative;
-  display: inline-block;
+  display: none;
   > img {
     width: 295px;
     height: 192px;
@@ -124,16 +134,8 @@ li {
   pointer-events: none;
 }
 
-ul li:nth-child(1):hover .join {
-  opacity: 1;
-  transition: opacity 150ms ease-in;
-}
-
-ul li:nth-child(2):hover .el-pollo-loco {
-  opacity: 1;
-  transition: opacity 150ms ease-in;
-}
-
+ul li:nth-child(1):hover .join,
+ul li:nth-child(2):hover .el-pollo-loco,
 ul li:nth-child(3):hover .dabubble {
   opacity: 1;
   transition: opacity 150ms ease-in;
@@ -159,3 +161,9 @@ ul li:nth-child(3):hover .dabubble {
   top: -70px;
   opacity: 0;
 }
+
+// .whitespace {
+//   width: 10%;
+//   height: 100%;
+//   background-color: red;
+// }

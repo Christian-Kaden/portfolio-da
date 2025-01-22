@@ -1,8 +1,15 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1440px;
+  width: 100%;
+  margin: 144px 72px 0 72px;
+}
+
 section {
   display: flex;
   justify-content: space-between;
-  width: 1240px;
-  margin-top: 144px;
   gap: 64px;
 }
 
@@ -74,7 +81,7 @@ ul {
     border-top: 1px solid #3dcfb680;
     border-bottom: 1px solid #3dcfb680;
     padding: 32px;
-    gap: 10px;
+    gap: 16px;
     transition: border-color 0.3s ease;
     &:hover {
       border-top-color: #3dcfb6;
@@ -120,25 +127,6 @@ input {
         width: 24px;
         height: 24px;
       }
-      > span {
-        font-family: "Karla-Regular";
-        font-size: 15px;
-        line-height: 18px;
-        color: #ffffff;
-        > a {
-          font-family: "FiraCode";
-          font-size: 15px;
-          font-weight: 400;
-          line-height: 18px;
-          letter-spacing: -0.03em;
-          color: #3dcfb6;
-          text-decoration: none;
-          &:hover {
-            color: #ffffff;
-            cursor: pointer;
-          }
-        }
-      }
     }
     > span {
       color: #e61c40;
@@ -149,6 +137,26 @@ input {
   }
   > div:last-child {
     align-items: center;
+  }
+}
+
+.privacy-policy-text {
+  font-family: "Karla-Regular";
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffffff;
+  > a {
+    font-family: "FiraCode";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: -0.03em;
+    color: #3dcfb6;
+    text-decoration: none;
+    &:hover {
+      color: #ffffff;
+      cursor: pointer;
+    }
   }
 }
 
@@ -229,5 +237,65 @@ input {
   }
   75% {
     opacity: 1;
+  }
+}
+
+@media (max-width: 1200px) {
+  section {
+    flex-direction: column;
+    align-items: center;
+  }
+  form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 750px) {
+  .wrapper {
+    margin: 144px 32px 0 32px;
+  }
+
+  .headline h1 {
+    font-size: 56px;
+    line-height: 56px;
+    letter-spacing: -0.03em;
+  }
+}
+
+@media (max-width: 400px) {
+  .wrapper {
+    margin: 144px 16px 0 16px;
+  }
+
+  article {
+    gap: 32px;
+  }
+
+  .headline {
+    gap: 16px;
+    > h3 {
+      font-size: 18px;
+      line-height: 21.04px;
+    }
+  }
+
+  .about-me h2 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  ul {
+    > li {
+      padding: 32px 16px;
+      > label {
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  input {
+    font-size: 16px;
+    line-height: 19.2px;
   }
 }

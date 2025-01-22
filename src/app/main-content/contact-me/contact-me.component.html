@@ -1,75 +1,77 @@
-<section>
-  <article>
-    <div class="headline">
-      <h3>Contact me</h3>
-      <h1>Let's work together</h1>
-    </div>
-    <div class="about-me">
-      <h2>Got a problem to solve?</h2>
-      <p>
-        Contact me through this form, I am interested in hearing from you,
-        knowing your ideas and contributing to your projects with my work.
-        <br /><br />
-        Need a Frontend developer?<button>Let's talk!</button>
-      </p>
-    </div>
-  </article>
-  <form>
-    <ul>
-      <li>
-        <label for="name">What's your name?</label>
-        <input type="text" id="name" placeholder="Your name goes here" />
-      </li>
-      <li>
-        <label for="email">What's your email?</label>
-        <input type="email" id="email" placeholder="youremail@email.com" />
-      </li>
-      <li>
-        <label for="request">How can I help you?</label>
-        <input
-          type="text"
-          id="request"
-          placeholder="Hello Christian, I am interested in..."
-        />
-      </li>
-    </ul>
-    <div class="privacy-policy">
-      <div>
+<div class="wrapper">
+  <section>
+    <article>
+      <div class="headline">
+        <h3>Contact me</h3>
+        <h1>Let's work together</h1>
+      </div>
+      <div class="about-me">
+        <h2>Got a problem to solve?</h2>
+        <p>
+          Contact me through this form, I am interested in hearing from you,
+          knowing your ideas and contributing to your projects with my work.
+          <br /><br />
+          Need a Frontend developer?<button>Let's talk!</button>
+        </p>
+      </div>
+    </article>
+    <form>
+      <ul>
+        <li>
+          <label for="name">What's your name?</label>
+          <input type="text" id="name" placeholder="Your name goes here" />
+        </li>
+        <li>
+          <label for="email">What's your email?</label>
+          <input type="email" id="email" placeholder="youremail@email.com" />
+        </li>
+        <li>
+          <label for="request">How can I help you?</label>
+          <input
+            type="text"
+            id="request"
+            placeholder="Hello Christian, I am interested in..."
+          />
+        </li>
+      </ul>
+      <div class="privacy-policy">
         <div>
-          <img
-            [ngClass]="{ 'check-mark-unchecked': !aggrement, 'check-mark-checked': aggrement,   }"
-            (click)="acceptPrivacyPolicy()"
-            src="assets/img/contact-check-mark-unchecked.svg"
-            alt=""
-          />
-          <img
-            [ngClass]="{ 'check-mark-unchecked': aggrement, 'check-mark-checked': !aggrement,   }"
-            (click)="acceptPrivacyPolicy()"
-            src="assets/img/contact-check-mark-checked.svg"
-            alt=""
-          />
+          <div>
+            <img
+              [ngClass]="{ 'check-mark-unchecked': !aggrement, 'check-mark-checked': aggrement,   }"
+              (click)="acceptPrivacyPolicy()"
+              src="assets/img/contact-check-mark-unchecked.svg"
+              alt=""
+            />
+            <img
+              [ngClass]="{ 'check-mark-unchecked': aggrement, 'check-mark-checked': !aggrement,   }"
+              (click)="acceptPrivacyPolicy()"
+              src="assets/img/contact-check-mark-checked.svg"
+              alt=""
+            />
+            <span class="privacy-policy-text"
+              >I've read the <a href="">privacy policy</a> and agree to the
+              processing of my data as outlined.</span
+            >
+          </div>
           <span
-            >I've read the <a href="">privacy policy</a> and agree to the
-            processing of my data as outlined.</span
+            [ngClass]="{
+              'error-message-hidden': !errorMessage,
+              'error-message-shown': errorMessage
+            }"
+            >Please accept the privacy policy.</span
           >
         </div>
-        <span
-          [ngClass]="{
-            'error-message-hidden': !errorMessage,
-            'error-message-shown': errorMessage
-          }"
-          >Please accept the privacy policy.</span
-        >
+        <div>
+          <button
+            [ngClass]="{ 'btn-hello-disabled': !aggrement, 'btn-hello': aggrement,   }"
+            class="btn"
+            (click)="checkAggrement()"
+          >
+            <span>Say Hello ;)</span>
+          </button>
+        </div>
       </div>
-      <div>
-        <button
-          [ngClass]="{ 'btn-hello-disabled': !aggrement, 'btn-hello': aggrement,   }"
-          class="btn"
-          (click)="checkAggrement()"
-        >
-          <span>Say Hello ;)</span>
-        </button>
-      </div>
-    </div>
-  </form>
-</section>
+    </form>
+  </section>
+</div>

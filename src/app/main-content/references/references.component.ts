@@ -17,7 +17,7 @@ export class ReferencesComponent {
       author: 'H.Janisch - Team Partner',
     },
     {
-      text: "I had the good fortune of working with Lukas in a group project at the Developer Akademie that involved a lot of effort. He always stayed calm, cool, and focused, and made sure our team was set up for success. He's super knowledgeable, easy to work with, and I'd happily work with him again given the chance.",
+      text: 'I had the good fortune of working with Lukas in a group project at the Developer Akademie that involved a lot of effort. He always stayed calm, cool, and focused, and made sure our team was set up for success.',
       author: 'A. Fischer - Team Partner',
     },
     {

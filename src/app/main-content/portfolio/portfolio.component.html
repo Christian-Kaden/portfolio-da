@@ -1,84 +1,90 @@
-<section>
-  <aside>
-    <div>
-      <h2>Portfolio</h2>
-      <h1>Featured Projects</h1>
-    </div>
-    <p>
-      Explore a selection of my work here - Interact with<br />
-      projects to see my skills in action.
-    </p>
-    <ul>
-      <li (click)="openDialog(0)">
-        <div class="project-name">
-          <h3>Join</h3>
-          <img src="./../../../assets/img/portfolio-arrow.svg" alt="" />
-        </div>
-        <div class="project-tec">
-          <span>Angular</span>
-          <div>|</div>
-          <span>TypeScript</span>
-          <div>|</div>
-          <span>HTML</span>
-          <div>|</div>
-          <span>CSS</span>
-          <div>|</div>
-          <span>Firebase</span>
-        </div>
-        <div class="join">
-          <div class="project-picture">
-            <img src="./../../../assets/img/portfolio-join-screen.png" alt="" />
+<div class="wrapper">
+  <section>
+    <aside>
+      <div>
+        <h2>Portfolio</h2>
+        <h1>Featured Projects</h1>
+      </div>
+      <p>
+        Explore a selection of my work here - Interact with<br />
+        projects to see my skills in action.
+      </p>
+      <ul>
+        <li (click)="openDialog(0)">
+          <div class="project-name">
+            <h3>Join</h3>
+            <img src="./../../../assets/img/portfolio-arrow.svg" alt="" />
           </div>
-        </div>
-      </li>
-      <li (click)="openDialog(1)">
-        <div class="project-name">
-          <h3>El Pollo Loco</h3>
-          <img src="./../../../assets/img/portfolio-arrow.svg" alt="" />
-        </div>
-        <div class="project-tec">
-          <span>HTML</span>
-          <div>|</div>
-          <span>CSS</span>
-          <div>|</div>
-          <span>JavaScript</span>
-        </div>
-        <div class="el-pollo-loco">
-          <div class="project-picture">
-            <img
-              src="./../../../assets/img/portfolio-el-pollo-loco-screen.png"
-              alt=""
-            />
+          <div class="project-tec">
+            <span>Angular</span>
+            <div>|</div>
+            <span>TypeScript</span>
+            <div>|</div>
+            <span>HTML</span>
+            <div>|</div>
+            <span>CSS</span>
+            <div>|</div>
+            <span>Firebase</span>
           </div>
-        </div>
-      </li>
-      <li (click)="openDialog(2)">
-        <div class="project-name">
-          <h3>DA Bubble</h3>
-          <img src="./../../../assets/img/portfolio-arrow.svg" alt="" />
-        </div>
-        <div class="project-tec">
-          <span>Angular</span>
-          <div>|</div>
-          <span>Firebase</span>
-          <div>|</div>
-          <span>TypeScript</span>
-        </div>
-        <div class="dabubble">
-          <div class="project-picture">
-            <img
-              src="./../../../assets/img/portfoilo-dabubble-screen.png"
-              alt=""
-            />
+          <div class="join">
+            <div class="project-picture">
+              <img
+                src="./../../../assets/img/portfolio-join-screen.png"
+                alt=""
+              />
+            </div>
           </div>
-        </div>
-      </li>
-    </ul>
-  </aside>
-  <app-dialog
-    *ngIf="isDialogOpen"
-    [currentProject]="currentProject"
-    (closeDialogEvent)="closeDialog()"
-  >
-  </app-dialog>
-</section>
+        </li>
+        <li (click)="openDialog(1)">
+          <div class="project-name">
+            <h3>El Pollo Loco</h3>
+            <img src="./../../../assets/img/portfolio-arrow.svg" alt="" />
+          </div>
+          <div class="project-tec">
+            <span>HTML</span>
+            <div>|</div>
+            <span>CSS</span>
+            <div>|</div>
+            <span>JavaScript</span>
+          </div>
+          <div class="el-pollo-loco">
+            <div class="project-picture">
+              <img
+                src="./../../../assets/img/portfolio-el-pollo-loco-screen.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </li>
+        <li (click)="openDialog(2)">
+          <div class="project-name">
+            <h3>DA Bubble</h3>
+            <img src="./../../../assets/img/portfolio-arrow.svg" alt="" />
+          </div>
+          <div class="project-tec">
+            <span>Angular</span>
+            <div>|</div>
+            <span>Firebase</span>
+            <div>|</div>
+            <span>TypeScript</span>
+          </div>
+          <div class="dabubble">
+            <div class="project-picture">
+              <img
+                src="./../../../assets/img/portfoilo-dabubble-screen.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </li>
+      </ul>
+    </aside>
+    <app-dialog
+      *ngIf="isDialogOpen"
+      [currentProject]="currentProject"
+      (closeDialogEvent)="closeDialog()"
+    >
+    </app-dialog>
+  </section>
+  <!-- <div class="whitespace"></div> -->
+</div>
